@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import android.widget.Toast
 
 /**
  * Fragmento que muestra el detalle completo de un Pikmin seleccionado.
@@ -34,6 +35,11 @@ class PaginapikFragment : Fragment() {
         val name = arguments?.getString("pikmin_name")
         val description = arguments?.getString("pikmin_desc")
         val imageResId = arguments?.getInt("pikmin_image")
+
+        if(name!=null){
+            val mensaje = getString(R.string.toast_selected, name)
+            Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show()
+        }
 
         // Referencias a las vistas
         val ivImage = view.findViewById<ImageView>(R.id.LaImagen)
