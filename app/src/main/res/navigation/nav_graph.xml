@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaFragment">
+
+    <!-- Pantalla 1: Lista (Inicio) -->
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="com.pmdm.tarea2_leonsiria_pedro.ListaFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_lista">
+
+        <!-- Acción: Ir al detalle -->
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/paginaPikFragment" />
+    </fragment>
+
+    <!-- Pantalla 2: Pagina individual -->
+    <fragment
+        android:id="@+id/paginaPikFragment"
+        android:name="com.pmdm.tarea2_leonsiria_pedro.PaginapikFragment"
+        android:label="@string/detail_title"
+        tools:layout="@layout/paginapik_detalles">
+    <!-- nombre, descripcion e imagen -->
+        <argument
+            android:name="pikmin_name"
+            app:argType="string" />
+        <argument
+            android:name="pikmin_desc"
+            app:argType="string" />
+        <argument
+            android:name="pikmin_image"
+            app:argType="integer" />
+    </fragment>
+
+    <!-- Pantalla 3: Ajustes -->
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="com.pmdm.tarea2_leonsiria_pedro.AjustesFragment"
+        android:label="@string/settings_title"
+        tools:layout="@layout/fragment_ajustes" />
+
+</navigation>

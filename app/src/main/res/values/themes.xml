@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.Tarea2_LeonSiria_Pedro</item>
+    </style>
+
+    <style name="Base.Theme.Tarea2_LeonSiria_Pedro" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="alertDialogTheme">@style/EstiloDialogo</item>
+    </style>
+
+    <style name="EstiloDialogo" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/background_card</item>
+        <item name="colorAccent">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+
+    <style name="Theme.Tarea2_LeonSiria_Pedro" parent="Base.Theme.Tarea2_LeonSiria_Pedro" />
+</resources>
